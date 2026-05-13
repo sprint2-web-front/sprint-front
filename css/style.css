@@ -23,20 +23,22 @@ box-sizing: border-box;
 body {
 background-color: var(--color-background);
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(180deg, #e8f0f7 0%, #dce8f5 50%, #cfe0f2 100%)
 }
 
 .menu {
-background-color: var(--color-accent);
+background-color:transparent;
 font-size: 30px;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+padding: 0 var(--spacing-md);
 }
 
 /* Colocar font-family GOTHAM */
 .ht {
-color: var(--color-background-alt);
+color: var(--color-accent);
 font-size: 20px;
 display: flex;
 text-align: center;
@@ -49,8 +51,8 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: right;
-color: var(--color-background-alt);
-gap: var(--spacing-md);
+color: var(--color-text-primary);
+gap: var(--spacing-sm);
 list-style: none;
 font-size: 15px;
 margin: var(--spacing-sm);
@@ -58,16 +60,18 @@ margin: var(--spacing-sm);
 
 .link {
 text-decoration: none;
-background-color: var(--color-accent);
-color: var(--color-background-alt);
+background-color: transparent;
+color: var(--color-accent);
 padding: 10px 20px;
-border: .5px solid var(--color-background-alt);
+border: .1px solid var(--color-accent);
 border-radius: 2px;
+transition: 0.3s;
 }
 
 .link:hover {
-opacity: 0.8;
-transition: 0.3s;
+background-color: var(--color-accent); 
+color: var(--color-background);          
+opacity: 1;
 }
 
 .inicio {
@@ -75,16 +79,21 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-gap: var(--spacing-xl);
 margin: var(--spacing-xl);
 font-size: large;
-gap: 10px;
-background-color: #0057FF;
+gap: 4px;
 }
 
 .sub-inicio {
 color: var(--color-text-primary);
-gap: var(--spacing-md);
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+gap: var(--spacing-sm);
+padding: var(--spacing-md);
 }
 
 .sub-inicio h3 {
@@ -98,8 +107,7 @@ background-color: var(--color-background-alt);
 display: flex;
 align-items: end;
 justify-content: right;
-padding: 10px 20px;
-margin-left: 30px;
+
 }
 
 .area {
@@ -107,53 +115,96 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: var(--spacing-xl);
-margin: var(--spacing-xl);
+gap: 4px;
+margin: 0;
 font-size: large;
-background-color: aqua;
+background-color: var(--color-background-alt);
+flex-wrap: wrap;
 }
 
 .sub-area {
-    gap: var(--spacing-xl);
-}
-
-.card1 {
-display: flexbox;
-flex-direction: column;
-align-items: center;
-justify-content: center;
 gap: var(--spacing-xl);
 }
 
-
-.b {
-    width: 585px;
-    height: auto;
+.card1, .card2, .card3 {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+align-items: center;
+gap: var(--spacing-md);
+background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
+padding: var(--spacing-sm);
+border-radius: 0;
+width: 100%;
+max-width: 100%;
+min-height: 400px; 
 }
 
-.c {
-    width: 585px;
-    height: auto;
+.card-texto {
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;    
+text-align: center;
+gap: var(--spacing-sm);
+padding: var(--spacing-md);
+}
+.card1 {
+background:( #ffffff 0%, #ddeeff 100%);}
+
+.card2 {
+background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
 }
 
-#func{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+.card3 {
+background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
 }
 
-.txt{
-    display: flex;
-    justify-content: center;
-    text-align: right;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.a, .b, .c {
+width: 50%;
+height: 100%;
+object-fit: cover; 
+display: block;
 }
 
-.txtH3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.txt {
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+font-size: 24px;
 }
+
+.txtH3 {
+font-weight: 400;
+font-size: 16px;
+color: var(--color-text-secondary);
+line-height: 1.6;
+text-align: center;
+}
+
 
 .btns{
-    display: flex;
-    justify-content: center;
-    text-align: right;
+padding: 10px 24px;
+background-color: var(--color-accent);
+color: var(--color-background);
+border-radius: 50px;      
+text-decoration: none;
+font-size: 15px;
+font-weight: 600;
+display: inline-block;
+flex-direction: row;
+justify-content: center;    
+align-items: center;        
+text-align: center;        
+}
+
+.fim {
+width: 100%;
+height: 50px;
+background: linear-gradient(135deg, #f0f7ff 0%, #ddeeff 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+gap: var(--spacing-md);
+padding: 0;
 }
