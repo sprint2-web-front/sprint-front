@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/Outros/Fontes/static/Roboto-Medium.ttf);
+    src: url(/Outros/Fontes/static/Roboto-SemiBold.ttf);
+}
+
 :root {
 --color-primary: #000000;
 --color-secondary: #1A1A1A;
@@ -23,11 +29,11 @@ box-sizing: border-box;
 body {
 background-color: var(--color-background);
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: linear-gradient(180deg, #e8f0f7 0%, #dce8f5 50%, #cfe0f2 100%)
+background: linear-gradient(180deg, rgba(228, 242, 255))
 }
 
 .menu {
-background-color:transparent;
+background-color:rgba(218, 241, 255);
 font-size: 30px;
 display: flex;
 flex-direction: row;
@@ -36,14 +42,14 @@ justify-content: space-between;
 padding: 0 var(--spacing-md);
 }
 
-/* Colocar font-family GOTHAM */
 .ht {
 color: var(--color-accent);
-font-size: 20px;
+font-size: 25px;
 display: flex;
 text-align: center;
 justify-content: space-between;
 padding: 25px 25px;
+font-family: 'Roboto';
 }
 
 .grade {
@@ -82,6 +88,7 @@ justify-content: center;
 margin: var(--spacing-xl);
 font-size: large;
 gap: 4px;
+background-color: rgba(228, 242, 255);
 }
 
 .sub-inicio {
@@ -101,13 +108,12 @@ color: var(--color-text-secondary);
 font-size: 15px;
 }
 
-.Y31 {
+.imgY31 {
 width: 750px;
-background-color: var(--color-background-alt);
+background-color: rgba(228, 242, 255);
 display: flex;
 align-items: end;
 justify-content: right;
-
 }
 
 .area {
@@ -150,8 +156,10 @@ text-align: center;
 gap: var(--spacing-sm);
 padding: var(--spacing-md);
 }
+
 .card1 {
-background:( #ffffff 0%, #ddeeff 100%);}
+background:( #ffffff 0%, #ddeeff 100%);
+}
 
 .card2 {
 background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
@@ -161,11 +169,26 @@ background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
 background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
 }
 
-.a, .b, .c {
+.img1, .img2, .img3 {
 width: 50%;
 height: 100%;
 object-fit: cover; 
 display: block;
+}
+
+.img1{
+    width: 400px;
+    height: 500px;
+}
+
+.img2{
+    width: 380px;
+    height: 560px;
+}
+
+.img3{
+    width: 400px;
+    height: 500px;
 }
 
 .txt {
@@ -181,7 +204,6 @@ color: var(--color-text-secondary);
 line-height: 1.6;
 text-align: center;
 }
-
 
 .btns{
 padding: 10px 24px;
