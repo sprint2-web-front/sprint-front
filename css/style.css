@@ -28,13 +28,17 @@ background: linear-gradient(180deg, rgba(228, 242, 255))
 }
 
 .menu {
-background-color:rgba(219, 241, 255);
 font-size: 30px;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
 padding: 0 var(--spacing-md);
+transition: 0.3s ease-in-out;
+}
+
+.menu:hover {
+background-color:rgba(215, 240, 255);
 }
 
 .ht{
@@ -139,6 +143,10 @@ border-radius: 0;
 width: 100%;
 max-width: 100%;
 min-height: 400px; 
+
+}
+.card1 {
+    padding: 3px;
 }
 
 .card-texto {
@@ -152,38 +160,35 @@ gap: var(--spacing-sm);
 padding: var(--spacing-md);
 }
 
-.card1 {
-background:( #ffffff 0%, #ddeeff 100%);
-}
-
-.card2 {
-background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
-}
-
-.card3 {
-background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
-}
 
 .img1, .img2, .img3 {
-width: 50%;
-height: 100%;
-object-fit: cover; 
-display: block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.img1:hover, .img2:hover, .img3:hover {
+    transform: scale(1.02);
 }
 
 .img1{
     width: 400px;
-    height: 500px;
+    height: 550px;
+    margin-right: 95px;
 }
 
 .img2{
     width: 380px;
     height: 560px;
+    margin-right: 100px;
 }
 
 .img3{
     width: 400px;
     height: 500px;
+    margin-right: 100px;
 }
 
 .txt {
@@ -201,19 +206,19 @@ text-align: center;
 }
 
 .btns{
-padding: 10px 24px;
-background-color: var(--color-accent);
-color: var(--color-background);
-border-radius: 50px;      
-text-decoration: none;
-font-size: 15px;
-font-weight: 600;
-display: inline-block;
-flex-direction: row;
-justify-content: center;    
-align-items: center;        
-text-align: center;
-transition:  150ms ease-out;  
+    padding: 10px 24px;
+    color: var(--color-background);
+    border-radius: 50px;      
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;        
+    text-align: center;
+    transition:  150ms ease-out;  
+    background-color: var(--color-accent);
 }
 
 .btns:hover{
