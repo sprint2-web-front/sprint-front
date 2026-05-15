@@ -40,7 +40,6 @@ border-radius:15px;
 text-align:center;
 }
 
-
 .textoh2{
 color:#0057FF;
 font-size:32px;
@@ -94,7 +93,6 @@ flex-direction: column;
 gap: 0.5px;
 }
 
-
 .botao{
 text-decoration:none;
 background:#0057FF;
@@ -127,7 +125,6 @@ transition:0.3s;
 .botao-voltar:hover{
 opacity:0.8;
 }
-
 
 .video-ia {
 border-radius: 20px;   
