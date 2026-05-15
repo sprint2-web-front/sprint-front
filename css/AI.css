@@ -21,7 +21,7 @@ align-items:center;
 }
 
 .Card1{
-width:420px;
+width: 420px;
 background:white;
 border-radius:25px;
 padding:30px;
@@ -90,6 +90,8 @@ padding:20px;
 border-radius:18px;
 display:flex;
 justify-content:center;
+flex-direction: column;
+gap: 0.5px;
 }
 
 
@@ -100,8 +102,37 @@ color:white;
 padding:12px 28px;
 border-radius:50px;
 transition:0.3s;
+text-align: center;
 }
 
 .botao:hover{
 opacity:0.8;
+}
+
+.voltar-box{
+margin-top:20px;
+display:flex;
+justify-content:center;
+}
+
+.botao-voltar{
+text-decoration:none;
+background:#0057FF;
+color:white;
+padding:12px 28px;
+border-radius:50px;
+transition:0.3s;
+}
+
+.botao-voltar:hover{
+opacity:0.8;
+}
+
+
+.video-ia {
+border-radius: 20px;   
+border: 5px solid #ddeeff; 
+object-fit: cover;  
+display: block;       
+box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }

@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Roboto';
-    src: url(/Outros/Fontes/static/Roboto-Medium.ttf);
-    src: url(/Outros/Fontes/static/Roboto-SemiBold.ttf);
-}
 
 :root {
 --color-primary: #000000;
