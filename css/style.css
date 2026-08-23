@@ -28,6 +28,9 @@ background: linear-gradient(180deg, rgba(228, 242, 255))
 }
 
 .menu {
+position: fixed;
+width: 100%;
+top: 0;
 font-size: 30px;
 display: flex;
 flex-direction: row;
@@ -35,6 +38,7 @@ align-items: center;
 justify-content: space-between;
 padding: 0 var(--spacing-md);
 transition: 0.3s ease-in-out;
+background-color:rgba(215, 240, 255, 0.6);
 }
 
 .menu:hover {
