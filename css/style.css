@@ -13,6 +13,7 @@
 --spacing-sm: 20px;
 --spacing-md: 50px;
 --spacing-xl: 90px;
+scroll-behavior: smooth;
 }
 
 * {
@@ -38,35 +39,11 @@ align-items: center;
 justify-content: space-between;
 padding: 0 var(--spacing-md);
 transition: 0.3s ease-in-out;
-background-color:rgba(215, 240, 255, 0.6);
+background-color:rgba(215, 240, 255, 0.8);
 }
 
 .menu:hover {
 background-color:rgba(215, 240, 255);
-}
-
-.solução, .publico-alvo, .equipe {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-width: 100%;
-padding: var(--spacing-xl);
-font-size: large;
-gap: 4px;
-background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
-}
-
-.sub-Solução {
-color: var(--color-text-primary);
-width: 50%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-gap: var(--spacing-sm);
-padding: var(--spacing-md);
 }
 
 .ht{
@@ -80,7 +57,7 @@ font-family: 'Roboto';
 }
 
 .grade {
-display: flex;
+    display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: right;
@@ -102,9 +79,60 @@ transition: 0.3s;
 }
 
 .link:hover {
-background-color: var(--color-accent); 
-color: var(--color-background);          
-opacity: 1;
+    background-color: var(--color-accent); 
+    color: var(--color-background);          
+    opacity: 1;
+}
+
+
+.apresentacao, .publico-alvo, .equipe {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 100%;
+padding: var(--spacing-xl);
+font-size: large;
+gap: 4px;
+background: linear-gradient(135deg, #ffffff 0%, #ddeeff 100%);
+}
+
+.sub-Apresentacao {
+color: var(--color-text-primary);
+width: 100%;
+max-width: 900px;
+display: flex;
+flex-direction: column;
+gap: var(--spacing-sm);
+padding: var(--spacing-md);
+max-width: 900px;
+}
+
+.sub-Apresentacao h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.paragrafo-esquerda {
+  text-align: left;
+  align-self: flex-start;
+  max-width: 95%;
+  margin-bottom: 20px;
+}
+
+.paragrafo-direita {
+  text-align: right;
+  align-self: flex-end;
+  max-width: 95%;
+  margin-bottom: 20px;
+}
+
+.paragrafo-centro {
+  text-align: center;
+  align-self: center;
+  max-width: 100%;
+  width: 95%;
 }
 
 .inicio, .galeria {
@@ -199,7 +227,7 @@ padding: var(--spacing-md);
     transition: 0.3s ease-in-out;
 }
 
-.img1:hover, .img2:hover, .img3:hover {
+.img1:hover, .img2:hover, .img3:hover, .img-publico:hover {
     transform: scale(1.02);
 }
 
@@ -254,6 +282,28 @@ text-align: center;
 .btns:hover{
     transform: scale(1.05);
 }
+
+.publico-alvo .sub-publico {
+  width: 50%;
+  text-align: left; 
+}
+
+.publico-div-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-publico {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
 
 .fim {
 width: 100%;
