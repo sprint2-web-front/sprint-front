@@ -22,12 +22,10 @@ padding: 0;
 box-sizing: border-box;
 }
 
-
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: rgb(228, 242, 255);
 }
-
 
 .menu {
 position: fixed;
@@ -83,8 +81,6 @@ background-color: var(--color-accent);
 color: var(--color-background);
 }
 
-
-
 .apresentacao,.publico-alvo,.equipe {
 display: flex;
 flex-direction: row;
@@ -105,6 +101,7 @@ display: flex;
 flex-direction: column;
 gap: var(--spacing-sm);
 padding: var(--spacing-md);
+text-align: center;
 }
 
 .sub-Apresentacao h1 {
@@ -113,29 +110,8 @@ width: 100%;
 margin-bottom: 30px;
 }
 
-.paragrafo-esquerda {
-text-align: left;
-align-self: flex-start;
-max-width: 95%;
-margin-bottom: 20px;
-}
 
-.paragrafo-direita {
-text-align: right;
-align-self: flex-end;
-max-width: 95%;
-margin-bottom: 20px;
-}
-
-.paragrafo-centro {
-text-align: center;
-align-self: center;
-max-width: 100%;
-width: 95%;
-}
-
-
-.inicio,.galeria {
+.inicio, .galeria {
 display: flex;
 flex-direction: row;
 align-items: center;
