@@ -1,139 +1,183 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background: linear-gradient(
-180deg,#99c9f3 0%,#b2d3f7 50%,#a0ceff 100%);
+body {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 24px 16px;
+background: linear-gradient(180deg, #99c9f3 0%, #b2d3f7 50%, #a0ceff 100%);
 font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-display:flex;
-justify-content:center;
-align-items:center;
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
 }
 
-.Card1{
-width: 420px;
-background:white;
-border-radius:25px;
-padding:30px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:20px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.AI-box{
-width:100%;
-background:#ddeeff;
-padding:15px;
-border-radius:15px;
-text-align:center;
-}
-
-.textoh2{
-color:#0057FF;
-font-size:32px;
-}
-
-.subtexto{
-color:#0057FF;
-font-size:20px;
-}
-
-.imagem-box{
-width:220px;
-height:220px;
-background:#f4f8ff;
-border-radius:20px;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.imagem-box img{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #ddeeff;
-}
-
-.texto-box{
-width:100%;
-background:#f7f9fc;
-padding:20px;
-border-radius:18px;
-text-align:center;
-}
-
-.instrucao{
-color:#666;
-line-height:1.7;
-font-size:15px;
-}
-
-.botao-box{
-width:100%;
-background:#eef4ff;
-padding:20px;
-border-radius:18px;
-display:flex;
-justify-content:center;
+.Card1 {
+width: 100%;
+max-width: 420px;
+background: white;
+border-radius: 25px;
+padding: 30px;
+display: flex;
 flex-direction: column;
-gap: 0.5px;
+align-items: center;
+gap: 20px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.botao{
-text-decoration:none;
-background:#0057FF;
-color:white;
-padding:12px 28px;
-border-radius:50px;
-transition:0.3s;
+.AI-box {
+width: 100%;
+background: #ddeeff;
+padding: 15px;
+border-radius: 15px;
 text-align: center;
 }
 
-.botao:hover{
-opacity:0.8;
+.textoh2 {
+color: #0057FF;
+font-size: 32px;
 }
 
-.voltar-box{
-margin-top:20px;
-display:flex;
-justify-content:center;
+.subtexto {
+color: #0057FF;
+font-size: 20px;
 }
 
-.botao-voltar{
-text-decoration:none;
-background:#0057FF;
-color:white;
-padding:12px 28px;
-border-radius:50px;
-transition:0.3s;
+.imagem-box {
+width: 220px;
+height: 220px;
+background: #f4f8ff;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-.botao-voltar:hover{
-opacity:0.8;
+.imagem-box img {
+width: 180px;
+height: 180px;
+object-fit: cover;
+border-radius: 50%;
+border: 5px solid #ddeeff;
+}
+
+.texto-box {
+width: 100%;
+background: #f7f9fc;
+padding: 20px;
+border-radius: 18px;
+text-align: center;
+}
+
+.instrucao {
+color: #666;
+ line-height: 1.7;
+font-size: 15px;
+}
+
+.botao-box {
+width: 100%;
+background: #eef4ff;
+padding: 20px;
+border-radius: 18px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 12px;
+}
+
+.botao {
+text-decoration: none;
+background: #0057FF;
+color: white;
+padding: 12px 28px;
+border-radius: 50px;
+transition: 0.3s;
+text-align: center;
+}
+
+.botao:hover {
+opacity: 0.8;
 }
 
 .video-ia {
-border-radius: 20px;   
-border: 5px solid #ddeeff; 
-object-fit: cover;  
-display: block;       
-box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+border-radius: 20px;
+border: 5px solid #ddeeff;
+object-fit: cover;
+display: block;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 @media (width <= 1024px) {
-    
+body {
+    padding: 20px 14px;
+}
+
+.Card1 {
+    max-width: 480px;
+    padding: 34px;
+    gap: 22px;
+}
+
+.imagem-box {
+    width: 240px;
+    height: 240px;
+}
+
+.imagem-box img {
+    width: 200px;
+    height: 200px;
+}
+
+.textoh2 {
+    font-size: 34px;
+}
+}
+
+
+@media (width <= 640px) {
+body {
+    padding: 16px 12px;
+}
+
+.Card1 {
+    padding: 22px;
+    gap: 16px;
+}
+
+.textoh2 {
+    font-size: 26px;
+}
+
+.subtexto {
+    font-size: 17px;
+}
+
+.imagem-box {
+    width: 170px;
+    height: 170px;
+}
+
+.imagem-box img {
+    width: 140px;
+    height: 140px;
+}
+
+.instrucao {
+    font-size: 14px;
+}
+
+.botao {
+    padding: 12px 20px;
+}
 }

@@ -1,4 +1,3 @@
-
 :root {
 --color-primary: #000000;
 --color-secondary: #1A1A1A;
@@ -27,10 +26,12 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: rgb(228, 242, 255);
 }
 
+
 .menu {
 position: fixed;
-width: 100%;
 top: 0;
+z-index: 10;
+width: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -57,6 +58,7 @@ font-family: 'Roboto';
 .grade {
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
 align-items: center;
 justify-content: right;
 color: var(--color-text-primary);
@@ -67,6 +69,8 @@ margin: var(--spacing-sm);
 }
 
 .link {
+display: inline-block;
+white-space: nowrap;
 text-decoration: none;
 background-color: transparent;
 color: var(--color-accent);
@@ -184,8 +188,7 @@ text-align: center;
 gap: var(--spacing-sm);
 padding: var(--spacing-md);
 }
-
-.img1,.img2,.img3,img-publico {
+.img1,.img2,.img3,.img-publico {
 height: 100%;
 object-fit: cover;
 display: block;
@@ -284,9 +287,10 @@ gap: var(--spacing-md);
 #rodape {
 font-family: 'Roboto';
 }
+
 @media (width <= 1024px) {
-.menu {
-    padding: 0 var(--spacing-sm);
+#apr, #solucao, #publico, #galery, #time, #contato {
+scroll-margin-top: 90px;
 }
 
 .grade {
@@ -334,7 +338,6 @@ font-family: 'Roboto';
     margin-right: 0;
 }
 
-  /* Público-alvo: imagem e texto empilhados */
 .publico-alvo {
     flex-direction: column;
 }
@@ -353,33 +356,36 @@ font-family: 'Roboto';
     max-width: 380px;
 }
 }
+
 @media (width <= 640px) {
 .menu {
     flex-direction: column;
-    padding: 10px 0;
+    padding: 10px 12px;
+    gap: 8px;
 }
 
 .grade {
-    flex-wrap: wrap;
     justify-content: center;
-    font-size: 13px;
+    gap: 8px;
+    margin: 0;
+    font-size: 12px;
+}
+
+.link {
+    padding: 6px 12px;
+    font-size: 12px;
 }
 
 .ht {
-    font-size: 20px;
-    padding: 12px;
+    font-size: 18px;
+    padding: 8px;
 }
 
-.card1, .card2, .card3,
-.inicio,
-.publico-alvo {
+.card1, .card2, .card3,.inicio,.publico-alvo {
     flex-direction: column;
 }
 
-.card-texto,
-.sub-inicio,
-.sub-publico,
-.publico-div-img {
+.card-texto,.sub-inicio,.sub-publico,.publico-div-img {
     width: 100%;
     padding: var(--spacing-sm);
 }
@@ -389,12 +395,15 @@ font-family: 'Roboto';
     max-width: 100%;
 }
 
-.apresentacao, .publico-alvo, .equipe,
-.inicio, .galeria, .area {
+.apresentacao, .publico-alvo, .equipe,.inicio, .galeria, .area {
     padding: var(--spacing-sm);
 }
 
 .sub-Apresentacao h1 {
     font-size: 22px;
+}
+
+#apr, #solucao, #publico, #galery, #time, #contato {
+    scroll-margin-top: 140px;
 }
 }
