@@ -133,3 +133,66 @@ object-fit: cover;
 display: block;       
 box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
+
+@media (width <= 1024px) {
+body {
+    padding: 20px 14px;
+}
+
+.Card1 {
+    max-width: 480px;
+    padding: 34px;
+    gap: 22px;
+}
+
+.imagem-box {
+    width: 240px;
+    height: 240px;
+}
+
+.imagem-box img {
+    width: 205px;
+    height: 205px;
+}
+
+.textoh2 {
+    font-size: 34px;
+}
+}
+
+@media (width <= 640px) {
+body {
+    padding: 16px 12px;
+}
+
+.Card1 {
+    padding: 22px;
+    gap: 16px;
+}
+
+.textoh2 {
+    font-size: 26px;
+}
+
+.subtexto {
+    font-size: 17px;
+}
+
+.imagem-box {
+    width: 170px;
+    height: 170px;
+}
+
+.imagem-box img {
+    width: 145px;
+    height: 145px;
+}
+
+.instrucao {
+    font-size: 14px;
+}
+
+.botao {
+    padding: 12px 20px;
+}
+}
