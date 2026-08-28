@@ -357,31 +357,39 @@ margin-top: 8px;
 
 .galeria-carousel {
 position: relative;
+display: flex;
+gap: 0;
+list-style: none;
 width: 100%;
 max-width: 800px;
 margin: var(--spacing-md) auto 0;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+anchor-name: --galeria-carousel;
+scroll-marker-group: after;
 }
 
-.carousel-imagem-box {
-width: 100%;
+.galeria-carousel li {
+flex: 0 0 100%;
 aspect-ratio: 16 / 10;
-border-radius: 15px;
+scroll-snap-align: center;
 overflow: hidden;
 background: var(--color-background-alt);
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-imagem-box img {
+.galeria-carousel img {
 width: 100%;
 height: 100%;
 object-fit: cover;
 display: block;
 }
 
-.carousel-btn {
+.galeria-carousel::scroll-button(*) {
 position: absolute;
-top: 50%;
-transform: translateY(-50%);
+position-anchor: --galeria-carousel;
+align-self: anchor-center;
 width: 44px;
 height: 44px;
 border-radius: 50%;
@@ -397,49 +405,49 @@ transition: 0.3s;
 z-index: 2;
 }
 
-.carousel-btn:hover {
+.galeria-carousel::scroll-button(*):hover {
 background: var(--color-accent);
-transform: translateY(-50%) scale(1.1);
+transform: scale(1.1);
 }
 
-.carousel-prev {
-left: 12px;
+.galeria-carousel::scroll-button(*):disabled {
+opacity: 0.3;
+cursor: default;
 }
 
-.carousel-next {
-right: 12px;
+.galeria-carousel::scroll-button(left) {
+content: "❮" / "Imagem anterior";
+left: anchor(left);
+margin-left: 12px;
 }
 
-.carousel-contador {
+.galeria-carousel::scroll-button(right) {
+content: "❯" / "Próxima imagem";
+right: anchor(right);
+margin-right: 12px;
+}
+
+.galeria-carousel::scroll-marker-group {
 position: absolute;
-bottom: 12px;
-right: 16px;
-background: rgba(0, 0, 0, 0.55);
-color: white;
-font-size: 12px;
-padding: 4px 10px;
-border-radius: 20px;
-}
-
-.carousel-dots {
+position-anchor: --galeria-carousel;
+top: calc(anchor(bottom) + var(--spacing-sm));
+justify-self: anchor-center;
 display: flex;
-justify-content: center;
 gap: 8px;
-margin-top: var(--spacing-sm);
 }
 
-.carousel-dot {
+.galeria-carousel li::scroll-marker {
+content: "";
 width: 10px;
 height: 10px;
 border-radius: 50%;
 background: var(--color-border);
 border: none;
 cursor: pointer;
-padding: 0;
 transition: 0.3s;
 }
 
-.carousel-dot.ativo {
+.galeria-carousel li::scroll-marker:target-current {
 background: var(--color-accent);
 transform: scale(1.3);
 }
@@ -494,7 +502,6 @@ scroll-margin-top: 90px;
     height: auto;
 }
 
-
 .card1,.card2,.card3 {
     grid-template-columns: 1fr;
     min-height: 0;
@@ -512,8 +519,7 @@ scroll-margin-top: 90px;
     flex-direction: column;
 }
 
-.publico-div-img,
-.publico-alvo .sub-publico {
+.publico-div-img,.publico-alvo .sub-publico {
     width: 100%;
 }
 
@@ -596,18 +602,18 @@ scroll-margin-top: 90px;
     height: 110px;
 }
 
-.carousel-btn {
+.galeria-carousel::scroll-button(*) {
     width: 36px;
     height: 36px;
     font-size: 15px;
 }
 
-.carousel-prev {
-    left: 8px;
+.galeria-carousel::scroll-button(left) {
+    margin-left: 8px;
 }
 
-.carousel-next {
-    right: 8px;
+.galeria-carousel::scroll-button(right) {
+    margin-right: 8px;
 }
 
 #apr, #solucao, #publico, #galery, #time, #contato {
